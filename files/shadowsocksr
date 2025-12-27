@@ -12,7 +12,6 @@ config servers
 	option tcp_guise 'none'
 	option mux '0'
 	option local_port '1234'
-	option alter_id '16'
 
 config servers
 	option switch_enable '0'
@@ -189,7 +188,6 @@ config servers
 	option tcp_guise 'none'
 	option mux '0'
 	option local_port '1234'
-	option alter_id '16'
 
 config servers
 	option switch_enable '0'
