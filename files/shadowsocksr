@@ -1183,9 +1183,7 @@ config servers
 	option congestion_control 'bbr'
 	option tuic_uuid '17232884-f865-4a96-fac4-4df1914b8612'
 	option switch_enable '0'
-	list tuic_alpn 'h3'
-	list tuic_alpn 'h2'
-	list tuic_alpn 'http/1.1'
+	option tuic_alpn 'h3,h2,http/1.1'
 
 config servers
 	option tls '0'
@@ -1290,7 +1288,5 @@ config servers
 	option congestion_control 'bbr'
 	option tuic_uuid 'f4cc557a-8e64-4a9c-aa95-0b2408f896fc'
 	option switch_enable '0'
-	list tuic_alpn 'h3'
-	list tuic_alpn 'h2'
-	list tuic_alpn 'http/1.1'
+	option tuic_alpn 'h3,h2,http/1.1'
 
