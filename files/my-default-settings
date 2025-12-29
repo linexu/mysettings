@@ -66,6 +66,8 @@ sed -i "/option fw_mode/a\\\toption exit_node_allow_lan_access '1'\\
 # 配置DHCP和SSR+
 mv /usr/share/linshi/dhcp /etc/config/
 mv /usr/share/linshi/shadowsocksr /etc/config/
+mv /usr/share/linshi/china_ssr.txt /etc/ssrplus/
+mv /usr/share/linshi/gfw_list.conf /etc/ssrplus/
 #mv /usr/share/linshi/passwall /etc/config/
 #mv /usr/share/linshi/passwall2 /etc/config/
 #mv /usr/share/linshi/homeproxy /etc/config/

@@ -35,6 +35,8 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/usr/share/linshi
 	$(INSTALL_CONF) ./files/dhcp $(1)/usr/share/linshi/dhcp
 	$(INSTALL_CONF) ./files/shadowsocksr $(1)/usr/share/linshi/shadowsocksr
+	$(INSTALL_CONF) ./files/china_ssr.txt $(1)/usr/share/linshi/china_ssr.txt
+	$(INSTALL_CONF) ./files/gfw_list.conf $(1)/usr/share/linshi/gfw_list.conf
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
