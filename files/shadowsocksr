@@ -463,7 +463,7 @@ config servers
 	option local_port '1234'
 
 config global
-	option global_server 'cfg474a8f'
+	option global_server 'cfg024a8f'
 	option netflix_server 'nil'
 	option netflix_proxy '0'
 	option threads '0'
