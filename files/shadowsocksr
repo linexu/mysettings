@@ -481,11 +481,11 @@ config global
 	option chnroute_url 'https://ispip.clang.cn/all_cn.txt'
 	option nfip_url 'https://fastly.jsdelivr.net/gh/QiuSimons/Netflix_IP/NF_only.txt'
 	option adblock_url 'https://anti-ad.net/anti-ad-for-dnsmasq.conf'
-	option chinadns_forward 'wan'
+	option chinadns_forward '114.114.114.114:53'
 
 config server_subscribe
 	option proxy '1'
-	option auto_update '0'
+	option auto_update '1'
 	option auto_update_week_time '*'
 	option auto_update_day_time '1'
 	option auto_update_min_time '38'

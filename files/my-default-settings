@@ -28,6 +28,9 @@ sed -i "s/2:-dhcp/2:-pppoe/g" /lib/functions/uci-defaults.sh
 # 加入網關
 #sed -i "/192.168.1.254/a\\\toption gateway '127.0.0.1'" /etc/config/network
 
+# 取消自動訂閲節點，保留自動更新【GFW 列表和中国大陆 IP 段】
+sed -i "s#/usr/bin/lua /usr/share/shadowsocksr/subscribe.lua#\#/usr/bin/lua /usr/share/shadowsocksr/subscribe.lua#" /usr/share/shadowsocksr/ssrplusupdate.sh
+
 # 修改 Tailscale 常規設置（允許局域網訪問、禁用 MagicDNS）
 sed -i "/option fw_mode/a\\\toption exit_node_allow_lan_access '1'\\
 \toption disable_magic_dns '1'" /etc/config/tailscale
