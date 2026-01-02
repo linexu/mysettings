@@ -15,6 +15,7 @@ uci commit system
 # 修改后台地址、PPPOE拨号账号密码、加入網關 127.0.0.1
 uci -q batch <<-EOF
 	set network.lan.ipaddr='192.168.1.254'
+	set network.lan.netmask='255.255.255.0'
 	set network.lan.gateway='127.0.0.1'
 	set network.wan.proto='pppoe'
 	set network.wan.username='02985412735'
