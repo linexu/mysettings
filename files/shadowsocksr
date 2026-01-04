@@ -33,7 +33,6 @@ config servers
 	option insecure '0'
 	option mux '0'
 	option local_port '1234'
-	option ip '192.168.1.250'
 
 config servers
 	option switch_enable '0'
@@ -481,7 +480,6 @@ config global
 	option chnroute_url 'https://ispip.clang.cn/all_cn.txt'
 	option nfip_url 'https://fastly.jsdelivr.net/gh/QiuSimons/Netflix_IP/NF_only.txt'
 	option adblock_url 'https://anti-ad.net/anti-ad-for-dnsmasq.conf'
-	option chinadns_forward 'wan'
 
 config server_subscribe
 	option proxy '1'
@@ -684,6 +682,7 @@ config servers
 	option ws_path '/'
 	option transport 'ws'
 	option switch_enable '0'
+	option ip '8.39.125.155'
 
 config servers
 	option tls '1'
