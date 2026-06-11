@@ -57,6 +57,18 @@ config host
 	option leasetime 'infinite'
 
 config host
+	option name 'iPhone14ProMaxSilver'
+	list mac 'E0:BD:A0:2C:69:64'
+	option ip '192.168.1.106'
+	option leasetime 'infinite'
+
+config host
+	option name 'vivo'
+	list mac '70:8f:47:94:d7:77'
+	option ip '192.168.1.107'
+	option leasetime 'infinite'
+
+config host
 	option name 'DELLG3-3579-WLAN'
 	list mac '54:BF:64:1B:5D:22'
 	option ip '192.168.1.108'
