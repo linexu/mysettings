@@ -107,4 +107,8 @@ sed -i 's#root::0:0:99999:7:::#root:$5$qY781.vtG9/2AHhK$QHezq5zRqwAunTctzGwLhDHf
 #sed -i "s#option enabled '0'#option enabled '1'#" /etc/config/vlmcsd
 #sed -i "s#option auto_activate '0'#option auto_activate '1'#" /etc/config/vlmcsd
 
+sed -i "s#3600#36000000#" /etc/config/luci
+
+sed -i "s#'/bin/login'#'/bin/login -f root'#" /etc/config/ttyd
+
 exit 0
