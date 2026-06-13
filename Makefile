@@ -37,6 +37,7 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_CONF) ./files/shadowsocksr $(1)/usr/share/linshi/shadowsocksr
 	$(INSTALL_CONF) ./files/china_ssr.txt $(1)/usr/share/linshi/china_ssr.txt
 	$(INSTALL_CONF) ./files/gfw_list.conf $(1)/usr/share/linshi/gfw_list.conf
+	$(INSTALL_CONF) ./files/white.list $(1)/usr/share/linshi/white.list
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
