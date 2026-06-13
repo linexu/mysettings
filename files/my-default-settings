@@ -111,4 +111,7 @@ sed -i "s#3600#36000000#" /etc/config/luci
 
 sed -i "s#'/bin/login'#'/bin/login -f root'#" /etc/config/ttyd
 
+sed -i "s#font-size: 0.75#font-size: 0.875#g" /rom/www/luci-static/argon/css/cascade.css
+#sed -i "s#font-size: 0.75#font-size: 0.875#g" /www/luci-static/argon/css/cascade.css
+
 exit 0
