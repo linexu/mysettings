@@ -73,6 +73,7 @@ mv /usr/share/linshi/shadowsocksr /etc/config/
 mv /usr/share/linshi/china_ssr.txt /etc/ssrplus/
 mv /usr/share/linshi/gfw_list.conf /etc/ssrplus/
 mv /usr/share/linshi/white.list /etc/ssrplus/
+
 #mv /usr/share/linshi/passwall /etc/config/
 #mv /usr/share/linshi/passwall2 /etc/config/
 #mv /usr/share/linshi/homeproxy /etc/config/
@@ -104,12 +105,17 @@ sed -i 's/o:value(i, i .. ":00")/o:value(i, i .. "")/' /usr/lib/lua/luci/model/c
 sed -i 's#root:::0:99999:7:::#root:$5$qY781.vtG9/2AHhK$QHezq5zRqwAunTctzGwLhDHfYfsrBiY9qeSxymZCaU6:20086:0:99999:7:::#g' /etc/shadow
 sed -i 's#root::0:0:99999:7:::#root:$5$qY781.vtG9/2AHhK$QHezq5zRqwAunTctzGwLhDHfYfsrBiY9qeSxymZCaU6:20086:0:99999:7:::#g' /etc/shadow
 
-# vlmcsd 服務缺省為激活運行狀態
+# 修改 vlmcsd 服務缺省為激活運行狀態
 #sed -i "s#option enabled '0'#option enabled '1'#" /etc/config/vlmcsd
 #sed -i "s#option auto_activate '0'#option auto_activate '1'#" /etc/config/vlmcsd
 
+# 修改網站頁面的閑置時間
 sed -i "s#3600#36000000#" /etc/config/luci
 
+# 修改 ttyd終端 為自動登錄 root 賬戶
 sed -i "s#'/bin/login'#'/bin/login -f root'#" /etc/config/ttyd
+
+# 修改 luci-theme-argon 主題的文字大小
+sed -i "s#font-size: 0.75#font-size: 0.875#g" /www/luci-static/argon/css/cascade.css
 
 exit 0
